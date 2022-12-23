@@ -1,0 +1,73 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(105, 105, 105, 0.795);
+	margin: 0;
+}
+h2{
+	color: gold;
+	text-align: center;
+	font-weight: 700;
+	font-size: 32px;
+}
+button{
+	margin-bottom: 10px;
+	gap: 15px;
+	font-size: 16px;
+	background-color: rgb(211, 242, 36);
+}
+button:hover{
+	background-color: rgb(85, 223, 70);
+	border-color: gold;
+}
+#container{
+	  background-color: rgba(12, 240, 58, 0.391);
+      width: 530px;
+	  height: 530px; 
+	  padding: 20px;
+	  display: flex;
+	  border: 2px solid rgba(218, 165, 32, 0.468);
+	  margin-left: 50px;
+}
+#inner{
+	 display: flex;
+	 flex-direction: column;
+	 background-color: white;
+	 margin: 2px;
+	 height: 500px;
+	 width: 500px;
+	 border: solid 4px rgb(20, 20, 19);
+}
+.row{
+	display: flex;
+	aspect-ratio: 1 / 1;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 1;
+}
+.box{
+	flex: 0 0 25%;
+	display: flex;
+	flex-shrink: 1;
+	aspect-ratio: 1 / 1;
+	box-sizing: border-box;
+}
+.box::before{
+	content: "";
+	display: table;
+	/*padding-top: 100%;*/
+}
+.col{
+    flex-grow: 1;
+	display: flex;
+	border: 2px solid rgb(139, 117, 117);
+}
+footer{
+	display: flex;
+	font-weight: 700;
+	color: rgba(89, 86, 86, 0.761);
+	margin-top: 20px;
+	padding: 10px;
+	background-color: rgba(152, 147, 147, 0.906);
+}
