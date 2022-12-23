@@ -4,6 +4,18 @@ let randomColor = document.querySelector("#rgbColor");
 let erase = document.querySelector("#erase");
 let black = document.querySelector("#blackColor");
 
+//Function to reset grid size
+function changeGridSize(){
+    let newSqu = parseInt(prompt("How many squares per side: "));
+    let container = document.querySelector("#inner")
+
+    if (newSqu > 100) {
+        alert("Maximum is 100")
+    }else {
+    container.replaceChildren()
+     makeGrids(newSqu);
+     changeColor()
+} }
 //Function to update color to black
 function blackColor() {
     let cols = document.querySelectorAll(".col")
