@@ -4,6 +4,14 @@ let randomColor = document.querySelector("#rgbColor");
 let erase = document.querySelector("#erase");
 let black = document.querySelector("#blackColor");
 
+// Function to clear color  
+function eraseColor(){
+    let cols = document.querySelectorAll(".col")
+    
+    cols.forEach(col => col.addEventListener("mouseenter", () => 
+        col.style.cssText = "background-color: white;" 
+    ))  
+}
 //Function to reset grid size
 function changeGridSize(){
     let newSqu = parseInt(prompt("How many squares per side: "));
