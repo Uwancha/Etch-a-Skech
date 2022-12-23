@@ -48,3 +48,12 @@ function makeGrids(v) {
     let container = document.querySelector("#inner");
     container.appendChild(row);
 }}}
+
+// Event Listeners
+changeGrid.addEventListener("click", changeGridSize);
+randomColor.addEventListener("click", rgbColor);
+erase.addEventListener("click", eraseColor);
+black.addEventListener("click", blackColor);
+
+// Set default Grid Size
+makeGrids(16);
