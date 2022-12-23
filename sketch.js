@@ -1,3 +1,25 @@
+// Global variables
+let changeGrid = document.querySelector("#newGrid");
+let randomColor = document.querySelector("#rgbColor");
+let erase = document.querySelector("#erase");
+let black = document.querySelector("#blackColor");
+
+//Function to update color to black
+function blackColor() {
+    let cols = document.querySelectorAll(".col")
+
+    cols.forEach(col => col.addEventListener("mouseenter", () => col.style.cssText = "background-color: black;"))
+}
+
+// Function to update color to random rgb
+function rgbColor() {
+    let cols = document.querySelectorAll(".col");
+    
+    cols.forEach(col => col.addEventListener("mouseenter", () => {
+        col.style.cssText = 'background-color: rgb('+ Math.round(Math.random() * 255) + ","  + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255)+');';
+    }) ) 
+}
+
 // Function to create grids
 function makeGrids(v) {
     for (var i = 0; i < v; i++) {
